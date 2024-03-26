@@ -8,7 +8,7 @@ class Game(models.Model):
     year_released = models.IntegerField()
     players = models.IntegerField()
     completion_time = models.IntegerField()
-    min_age = models.ImageField(max_length=2)
+    min_age = models.IntegerField()
 
 
 

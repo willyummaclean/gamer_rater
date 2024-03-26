@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework import routers
-from raterapi.views import GameViewSet
+from raterapi.views import GameViewSet, UserViewSet
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'games', GameViewSet, 'games')

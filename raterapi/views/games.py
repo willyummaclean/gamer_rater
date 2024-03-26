@@ -5,7 +5,7 @@ from raterapi.models import Game
 
 
 class GameSerializer(serializers.ModelSerializer):
-    categories = CategorySerializer(many=True)
+    # categories = CategorySerializer(many=True)
 
     class Meta:
         model = Game
@@ -49,8 +49,8 @@ class GameViewSet(viewsets.ViewSet):
             
 
         # Establish the many-to-many relationships
-        category_ids = request.data.get('categories', [])
-        game.categories.set(category_ids)
+        # category_ids = request.data.get('categories', [])
+        # game.categories.set(category_ids)
 
         serializer = GameSerializer(game, context={'request': request})
         return Response(serializer.data, status=status.HTTP_201_CREATED)
